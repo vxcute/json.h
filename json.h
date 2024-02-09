@@ -113,7 +113,7 @@ internal JsonValue _JsonParse(Lexer *lexer);
 
 // Public API
 JsonValue JsonParse(const char *data);
-JsonValue JsonGetValue(JsonObject object, char *key);
+JsonValue JsonGetValue(JsonObject object, const char *key);
 void JsonPrintValue(JsonValue value);
 
 internal Lexer *LexerNew(const char *data) {
@@ -422,7 +422,7 @@ void JsonPrintValue(JsonValue value) {
   }
 }
 
-JsonValue JsonGetValue(JsonObject object, char *key) {
+JsonValue JsonGetValue(JsonObject object, const char *key) {
   JsonPair *pairs = object.pairs;
 
   for (size_t i = 0; i < object.pairs_count; i++) {
