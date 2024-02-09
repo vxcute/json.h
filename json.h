@@ -110,10 +110,10 @@ internal JsonValue JsonParseBool(Lexer *l);
 internal JsonPair JsonParsePair(Lexer *l);
 internal JsonValue JsonParseObject(Lexer *l);
 internal JsonValue _JsonParse(Lexer *lexer);
-internal JsonValue JsonGetValue(JsonObject object, char *key);
 
 // Public API
 JsonValue JsonParse(const char *data);
+JsonValue JsonGetValue(JsonObject object, char *key);
 void JsonPrintValue(JsonValue value);
 
 internal Lexer *LexerNew(const char *data) {
